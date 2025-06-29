@@ -1,0 +1,70 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <view class="header-title">⚠️ 忌口设置</view>
+    <view class="add-btn" bindtap="onAddAllergy">➕</view>
+  </view>
+
+  <!-- 主要内容区域 -->
+  <view class="content">
+    <!-- 左侧：常见过敏食材 -->
+    <view class="left-panel">
+      <view class="panel-title">🔍 常见过敏食材</view>
+      <view class="allergies-grid">
+        <view class="allergy-item" 
+              wx:for="{{commonAllergies}}" 
+              wx:key="name"
+              bindtap="onCommonAllergyTap"
+              data-name="{{item.name}}">
+          <text class="allergy-icon">{{item.icon}}</text>
+          <text class="allergy-name">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 右侧：我的忌口 -->
+    <view class="right-panel">
+      <view class="panel-title">我的忌口</view>
+      <view class="user-allergies">
+        <view class="allergy-tag" 
+              wx:for="{{userAllergies}}" 
+              wx:key="index"
+              bindtap="onUserAllergyTap"
+              data-name="{{item}}">
+          {{item}}
+        </view>
+        <view class="empty-tip" wx:if="{{userAllergies.length === 0}}">
+          暂无忌口设置
+        </view>
+      </view>
+      <view class="clear-btn" bindtap="onClearAll" wx:if="{{userAllergies.length > 0}}">
+        清空全部
+      </view>
+    </view>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="tip">
+    💡 提示: 点击左侧食材可添加到忌口列表中，点击右侧食材可移除忌口
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save-btn" bindtap="onSaveSettings">
+    ✅ 保存设置
+  </view>
+</view>
+
+<!-- 添加忌口弹窗 -->
+<view class="modal" wx:if="{{showAddModal}}">
+  <view class="modal-content">
+    <view class="modal-title">添加忌口食材</view>
+    <input class="modal-input" 
+           placeholder="请输入食材名称" 
+           value="{{newAllergy}}"
+           bindinput="onInputChange" />
+    <view class="modal-buttons">
+      <button class="modal-btn modal-btn-cancel" bindtap="onCancelAdd">取消</button>
+      <button class="modal-btn modal-btn-confirm" bindtap="onConfirmAdd">确定</button>
+    </view>
+  </view>
+</view> 

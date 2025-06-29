@@ -1,0 +1,201 @@
+.container {
+  padding: 30rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-btn {
+  width: 60rpx;
+  height: 60rpx;
+  background: #FFB6C1;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 30rpx;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.panel-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25rpx;
+  text-align: center;
+}
+
+.allergies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+
+.allergy-item {
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.allergy-item:active {
+  background: #FFB6C1;
+  transform: scale(0.95);
+}
+
+.allergy-icon {
+  display: block;
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.allergy-name {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.user-allergies {
+  min-height: 300rpx;
+}
+
+.allergy-tag {
+  display: inline-block;
+  background: #FFB6C1;
+  color: #fff;
+  padding: 12rpx 20rpx;
+  border-radius: 25rpx;
+  margin: 8rpx;
+  font-size: 26rpx;
+  transition: all 0.3s ease;
+}
+
+.allergy-tag:active {
+  background: #ff8fa3;
+  transform: scale(0.95);
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+  margin-top: 100rpx;
+}
+
+.clear-btn {
+  background: #ff6b6b;
+  color: #fff;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+
+.tip {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  margin: 30rpx 0;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.save-btn {
+  background: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 25rpx;
+  border-radius: 12rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/* 弹窗样式 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 40rpx;
+  width: 80%;
+  max-width: 600rpx;
+}
+
+.modal-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.modal-input {
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  border: none;
+}
+
+.modal-btn-cancel {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.modal-btn-confirm {
+  background: #FFB6C1;
+  color: #fff;
+} 

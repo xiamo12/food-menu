@@ -1,0 +1,151 @@
+.container {
+  padding: 30rpx;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 40rpx;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+
+.avatar image {
+  width: 100%;
+  height: 100%;
+}
+
+.username {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-section, .allergies-section, .favorites-section {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.info-list {
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.info-value {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.allergies-card {
+  background: #fff3cd;
+  border-radius: 12rpx;
+  padding: 25rpx;
+  border-left: 4rpx solid #ffc107;
+}
+
+.allergies-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+  margin-bottom: 15rpx;
+}
+
+.allergy-tag {
+  background: #ffc107;
+  color: #fff;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.allergies-summary {
+  font-size: 26rpx;
+  color: #856404;
+  margin-bottom: 10rpx;
+}
+
+.allergies-action {
+  font-size: 24rpx;
+  color: #FFB6C1;
+}
+
+.favorites-list {
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.favorite-icon {
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+
+.favorite-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.favorite-more {
+  text-align: center;
+  color: #FFB6C1;
+  font-size: 26rpx;
+  padding: 15rpx 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.action-buttons button {
+  flex: 1;
+} 

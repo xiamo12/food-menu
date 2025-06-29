@@ -1,0 +1,66 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <view class="avatar">
+      <image src="{{userInfo.avatar}}" mode="aspectFill"></image>
+    </view>
+    <view class="user-details">
+      <view class="username">{{userInfo.name}}</view>
+    </view>
+  </view>
+
+  <!-- 个人信息 -->
+  <view class="info-section">
+    <view class="section-title">📊 个人信息</view>
+    <view class="info-list">
+      <view class="info-item">
+        <text class="info-label">宝宝年龄:</text>
+        <text class="info-value">{{userInfo.babyAge}}</text>
+      </view>
+      <view class="info-item">
+        <text class="info-label">创建时间:</text>
+        <text class="info-value">{{userInfo.createTime}}</text>
+      </view>
+      <view class="info-item">
+        <text class="info-label">收藏食谱:</text>
+        <text class="info-value">{{userInfo.favorites.length}}个</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 忌口设置 -->
+  <view class="allergies-section">
+    <view class="section-title">⚠️ 忌口设置</view>
+    <view class="allergies-card" bindtap="onManageAllergies">
+      <view class="allergies-preview">
+        <view class="allergy-tag" wx:for="{{allergies}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+      <view class="allergies-summary">
+        已设置{{allergies.length}}项忌口食材
+      </view>
+      <view class="allergies-action">点击管理忌口设置 ></view>
+    </view>
+  </view>
+
+  <!-- 我的收藏 -->
+  <view class="favorites-section">
+    <view class="section-title">📚 我的收藏</view>
+    <view class="favorites-list">
+      <view class="favorite-item" wx:for="{{userInfo.favorites}}" wx:key="id" wx:if="{{index < 3}}">
+        <text class="favorite-icon">{{item.icon}}</text>
+        <text class="favorite-name">{{item.name}}</text>
+      </view>
+      <view class="favorite-more" wx:if="{{userInfo.favorites.length > 3}}" bindtap="onViewFavorites">
+        查看更多...
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="btn-secondary" bindtap="onEditProfile">📝 编辑资料</button>
+    <button class="btn-secondary" bindtap="onSyncData">同步数据</button>
+  </view>
+</view> 

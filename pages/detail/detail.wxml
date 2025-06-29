@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 食谱图片 -->
+  <view class="recipe-image">
+    <image src="{{recipe.image}}" mode="aspectFill"></image>
+  </view>
+
+  <!-- 食谱标题 -->
+  <view class="recipe-header">
+    <view class="recipe-title">
+      <text class="recipe-icon">{{recipe.icon}}</text>
+      <text>{{recipe.name}}</text>
+    </view>
+    <view class="recipe-desc">{{recipe.description}}</view>
+  </view>
+
+  <!-- 准备食材 -->
+  <view class="section">
+    <view class="section-title">📋 准备食材</view>
+    <view class="ingredients-list">
+      <view class="ingredient-item" wx:for="{{recipe.ingredients}}" wx:key="index">
+        • {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 制作步骤 -->
+  <view class="section">
+    <view class="section-title">🍳 制作步骤</view>
+    <view class="steps-list">
+      <view class="step-item" wx:for="{{recipe.steps}}" wx:key="index">
+        <view class="step-number">{{index + 1}}️⃣</view>
+        <view class="step-content">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 注意事项 -->
+  <view class="section">
+    <view class="section-title">⚠️ 注意事项</view>
+    <view class="notes-list">
+      <view class="note-item" wx:for="{{recipe.notes}}" wx:key="index">
+        • {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="btn-favorite {{isFavorite ? 'btn-favorite-active' : ''}}" 
+            bindtap="onToggleFavorite">
+      {{isFavorite ? '❤️ 已收藏' : '收藏'}}
+    </button>
+    <button class="btn-share" bindtap="onShare">📤 分享</button>
+  </view>
+</view> 

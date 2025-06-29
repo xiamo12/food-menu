@@ -1,0 +1,60 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <view class="title">宝宝辅食菜单助手</view>
+    <view class="date">今日菜单 ({{currentDate}})</view>
+  </view>
+
+  <!-- 早餐 -->
+  <view class="meal-section">
+    <view class="meal-title">
+      <text class="meal-icon">��</text>
+      <text>早餐</text>
+    </view>
+    <view class="recipe-card" bindtap="onRecipeTap" data-type="breakfast">
+      <view class="recipe-icon">{{todayMenu.breakfast.icon}}</view>
+      <view class="recipe-info">
+        <view class="recipe-name">{{todayMenu.breakfast.name}}</view>
+        <view class="recipe-desc">{{todayMenu.breakfast.description}}</view>
+        <view class="recipe-action">点击查看详情 ></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 午餐 -->
+  <view class="meal-section">
+    <view class="meal-title">
+      <text class="meal-icon">☀️</text>
+      <text>午餐</text>
+    </view>
+    <view class="recipe-card" bindtap="onRecipeTap" data-type="lunch">
+      <view class="recipe-icon">{{todayMenu.lunch.icon}}</view>
+      <view class="recipe-info">
+        <view class="recipe-name">{{todayMenu.lunch.name}}</view>
+        <view class="recipe-desc">{{todayMenu.lunch.description}}</view>
+        <view class="recipe-action">点击查看详情 ></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 晚餐 -->
+  <view class="meal-section">
+    <view class="meal-title">
+      <text class="meal-icon">��</text>
+      <text>晚餐</text>
+    </view>
+    <view class="recipe-card" bindtap="onRecipeTap" data-type="dinner">
+      <view class="recipe-icon">{{todayMenu.dinner.icon}}</view>
+      <view class="recipe-info">
+        <view class="recipe-name">{{todayMenu.dinner.name}}</view>
+        <view class="recipe-desc">{{todayMenu.dinner.description}}</view>
+        <view class="recipe-action">点击查看详情 ></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 重新生成按钮 -->
+  <view class="regenerate-btn" bindtap="onRegenerateMenu">
+    🔄 重新生成菜单
+  </view>
+</view> 
