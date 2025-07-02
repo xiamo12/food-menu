@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">
+    <view class="title">我的收藏</view>
+    <view class="subtitle">共收藏了 {{favorites.length}} 个食谱</view>
+  </view>
+
+  <view class="favorites-list" wx:if="{{favorites.length > 0}}">
+    <view class="favorite-item" wx:for="{{favorites}}" wx:key="id" bindtap="onRecipeTap" data-recipe="{{item}}">
+      <view class="recipe-info">
+        <text class="recipe-icon">{{item.icon}}</text>
+        <view class="recipe-details">
+          <view class="recipe-name">{{item.name}}</view>
+          <view class="recipe-desc">{{item.description}}</view>
+        </view>
+      </view>
+      <view class="recipe-actions">
+        <!-- <button class="btn-remove" 
+                catchtap="onRemoveFavorite"
+                data-recipe="{{item}}">
+          取消收藏
+        </button> -->
+        <text class="btn-remove" catchtap="onRemoveFavorite" data-recipe="{{item}}">取消收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:else>
+    <view class="empty-icon">📖</view>
+    <view class="empty-text">还没有收藏任何食谱</view>
+    <view class="empty-tip">去首页发现更多美味食谱吧~</view>
+    <button class="btn-primary" bindtap="onGoHome">去首页</button>
+  </view>
+</view>

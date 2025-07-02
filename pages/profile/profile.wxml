@@ -48,12 +48,30 @@
   <view class="favorites-section">
     <view class="section-title">📚 我的收藏</view>
     <view class="favorites-list">
-      <view class="favorite-item" wx:for="{{userInfo.favorites}}" wx:key="id" wx:if="{{index < 3}}">
-        <text class="favorite-icon">{{item.icon}}</text>
-        <text class="favorite-name">{{item.name}}</text>
+      <!-- 有收藏时显示收藏列表 -->
+      <view wx:if="{{userInfo.favorites.length > 0}}">
+        <view class="favorite-item" 
+              wx:for="{{userInfo.favorites}}" 
+              wx:key="id" 
+              wx:if="{{index < 3}}"
+              bindtap="onFavoriteTap"
+              data-recipe="{{item}}">
+          <text class="favorite-icon">{{item.icon}}</text>
+          <text class="favorite-name">{{item.name}}</text>
+          <text class="favorite-arrow">＞</text>
+        </view>
+        <view class="favorite-more" 
+              wx:if="{{userInfo.favorites.length > 3}}" 
+              bindtap="onViewFavorites">
+          查看更多...
+        </view>
       </view>
-      <view class="favorite-more" wx:if="{{userInfo.favorites.length > 3}}" bindtap="onViewFavorites">
-        查看更多...
+      
+      <!-- 没有收藏时显示提示 -->
+      <view wx:else class="favorites-empty">
+        <view class="empty-icon">📖</view>
+        <view class="empty-text">还没有收藏任何食谱</view>
+        <view class="empty-tip">去首页发现更多美味食谱吧~</view>
       </view>
     </view>
   </view>
@@ -62,5 +80,35 @@
   <view class="action-buttons">
     <button class="btn-secondary" bindtap="onEditProfile">📝 编辑资料</button>
     <button class="btn-secondary" bindtap="onSyncData">同步数据</button>
+  </view>
+</view>
+
+<!-- 编辑资料弹窗 -->
+<view class="modal" wx:if="{{showEditModal}}">
+  <view class="modal-content">
+    <view class="modal-title">编辑资料</view>
+    
+    <view class="form-item">
+      <text class="form-label">用户名</text>
+      <input class="form-input" 
+             placeholder="请输入用户名" 
+             value="{{editForm.name}}"
+             data-field="name"
+             bindinput="onInputChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="form-label">宝宝年龄</text>
+      <input class="form-input" 
+             placeholder="请输入宝宝年龄" 
+             value="{{editForm.babyAge}}"
+             data-field="babyAge"
+             bindinput="onInputChange" />
+    </view>
+    
+    <view class="modal-buttons">
+      <button class="modal-btn modal-btn-cancel" bindtap="onCancelEdit">取消</button>
+      <button class="modal-btn modal-btn-confirm" bindtap="onSaveProfile">保存</button>
+    </view>
   </view>
 </view> 

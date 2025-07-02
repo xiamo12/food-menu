@@ -12,12 +12,12 @@ Page({
 
   onLoad() {
     this.setCurrentDate();
-    this.generateTodayMenu();
+    this.loadTodayMenu();
   },
 
   onShow() {
-    // 每次显示页面时重新生成菜单
-    this.generateTodayMenu();
+    // 只在显示页面时检查日期，不重新生成菜单
+    this.checkAndUpdateMenu();
   },
 
   setCurrentDate() {
@@ -28,6 +28,32 @@ Page({
     this.setData({
       currentDate: `${year}-${month}-${day}`
     });
+  },
+
+  checkAndUpdateMenu() {
+    const today = new Date().toDateString();
+    const savedDate = wx.getStorageSync('menuDate');
+    
+    // 如果是新的一天，重新生成菜单
+    if (savedDate !== today) {
+      this.generateTodayMenu();
+      wx.setStorageSync('menuDate', today);
+    }
+  },
+
+  loadTodayMenu() {
+    const savedMenu = wx.getStorageSync('todayMenu');
+    const today = new Date().toDateString();
+    const savedDate = wx.getStorageSync('menuDate');
+    
+    // 如果保存的菜单是今天的，则使用保存的菜单
+    if (savedMenu && savedDate === today) {
+      this.setData({ todayMenu: savedMenu });
+    } else {
+      // 否则生成新菜单
+      this.generateTodayMenu();
+      wx.setStorageSync('menuDate', today);
+    }
   },
 
   generateTodayMenu() {
@@ -65,6 +91,9 @@ Page({
     };
 
     this.setData({ todayMenu });
+    
+    // 保存到本地存储
+    wx.setStorageSync('todayMenu', todayMenu);
   },
 
   onRecipeTap(e) {

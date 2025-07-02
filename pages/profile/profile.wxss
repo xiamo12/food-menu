@@ -111,34 +111,76 @@
   background: #f8f8f8;
   border-radius: 12rpx;
   padding: 20rpx;
+  /* min-height: 200rpx; */
 }
 
 .favorite-item {
   display: flex;
   align-items: center;
-  padding: 15rpx 0;
+  padding: 10rpx 0;
   border-bottom: 1rpx solid #eee;
+  transition: all 0.3s ease;
 }
 
 .favorite-item:last-child {
   border-bottom: none;
 }
 
+.favorite-item:active {
+  background: #f0f0f0;
+  border-radius: 8rpx;
+  transform: scale(0.98);
+}
+
 .favorite-icon {
-  font-size: 32rpx;
+  font-size: 34rpx;
   margin-right: 15rpx;
 }
 
 .favorite-name {
   font-size: 28rpx;
   color: #333;
+  flex: 1;
+}
+
+.favorite-arrow {
+  font-size: 32rpx;
+  color: rgba(153, 153, 153, 0.5);
 }
 
 .favorite-more {
   text-align: center;
   color: #FFB6C1;
   font-size: 26rpx;
-  padding: 15rpx 0;
+  padding: 20rpx 0;
+}
+
+/* 新增：空状态样式 */
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20rpx 20rpx; */
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 60rpx;
+  /* margin-bottom: 20rpx; */
+  opacity: 0.6;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.empty-tip {
+  font-size: 18rpx;
+  color: #999;
+  line-height: 1.4;
 }
 
 .action-buttons {
@@ -148,4 +190,79 @@
 
 .action-buttons button {
   flex: 1;
+}
+
+/* 编辑弹窗样式 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 40rpx;
+  width: 80%;
+  max-width: 600rpx;
+}
+
+.modal-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+.form-label {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.form-input {
+  width: 100%;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  height: 34px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 40rpx;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  border: none;
+}
+
+.modal-btn-cancel {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.modal-btn-confirm {
+  background: #FFB6C1;
+  color: #fff;
 } 

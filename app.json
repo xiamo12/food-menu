@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/loading/loading",
     "pages/index/index",
     "pages/detail/detail",
     "pages/profile/profile",
-    "pages/allergies/allergies"
+    "pages/allergies/allergies",
+    "pages/favorites/favorites"
   ],
   "window": {
     "backgroundTextStyle": "light",

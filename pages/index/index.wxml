@@ -8,7 +8,7 @@
   <!-- 早餐 -->
   <view class="meal-section">
     <view class="meal-title">
-      <text class="meal-icon">��</text>
+      <text class="meal-icon"></text>
       <text>早餐</text>
     </view>
     <view class="recipe-card" bindtap="onRecipeTap" data-type="breakfast">
@@ -40,7 +40,7 @@
   <!-- 晚餐 -->
   <view class="meal-section">
     <view class="meal-title">
-      <text class="meal-icon">��</text>
+      <text class="meal-icon">🌄</text>
       <text>晚餐</text>
     </view>
     <view class="recipe-card" bindtap="onRecipeTap" data-type="dinner">

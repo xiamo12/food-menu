@@ -58,9 +58,23 @@ Page({
   },
 
   onShare() {
-    wx.showShareMenu({
-      withShareTicket: true,
-      menus: ['shareAppMessage', 'shareTimeline']
+    wx.showActionSheet({
+      itemList: ['分享给微信好友', '分享到朋友圈'],
+      success: (res) => {
+        if (res.tapIndex === 0) {
+          // 分享给微信好友
+          wx.showShareMenu({
+            withShareTicket: true,
+            menus: ['shareAppMessage']
+          });
+        } else if (res.tapIndex === 1) {
+          // 分享到朋友圈
+          wx.showShareMenu({
+            withShareTicket: true,
+            menus: ['shareTimeline']
+          });
+        }
+      }
     });
   },
 
@@ -69,6 +83,14 @@ Page({
     return {
       title: `${recipe.name} - 宝宝辅食食谱`,
       path: `/pages/detail/detail?id=${recipe.id}`,
+      imageUrl: recipe.image
+    };
+  },
+
+  onShareTimeline() {
+    const recipe = this.data.recipe;
+    return {
+      title: `${recipe.name} - 宝宝辅食食谱`,
       imageUrl: recipe.image
     };
   }

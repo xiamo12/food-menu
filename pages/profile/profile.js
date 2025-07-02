@@ -1,7 +1,12 @@
 Page({
   data: {
     userInfo: {},
-    allergies: []
+    allergies: [],
+    showEditModal: false,
+    editForm: {
+      name: '',
+      babyAge: ''
+    }
   },
 
   onLoad() {
@@ -21,10 +26,84 @@ Page({
   },
 
   onEditProfile() {
-    wx.showModal({
-      title: '编辑资料',
-      content: '功能开发中...',
-      showCancel: false
+    // 获取微信用户信息
+    wx.getUserProfile({
+      desc: '用于完善用户资料',
+      success: (res) => {
+        const { userInfo: wxUserInfo } = res;
+        
+        // 设置编辑表单的初始值
+        this.setData({
+          showEditModal: true,
+          editForm: {
+            name: this.data.userInfo.name,
+            babyAge: this.data.userInfo.babyAge
+          }
+        });
+        
+        // 更新头像为微信头像
+        const app = getApp();
+        app.globalData.userInfo.avatar = wxUserInfo.avatarUrl;
+        this.setData({
+          'userInfo.avatar': wxUserInfo.avatarUrl
+        });
+        
+        // 保存到本地存储
+        wx.setStorageSync('userInfo', app.globalData.userInfo);
+      },
+      fail: () => {
+        // 如果用户拒绝，仍然可以编辑其他信息
+        this.setData({
+          showEditModal: true,
+          editForm: {
+            name: this.data.userInfo.name,
+            babyAge: this.data.userInfo.babyAge
+          }
+        });
+      }
+    });
+  },
+
+  onInputChange(e) {
+    const { field } = e.currentTarget.dataset;
+    this.setData({
+      [`editForm.${field}`]: e.detail.value
+    });
+  },
+
+  onSaveProfile() {
+    const { editForm } = this.data;
+    
+    if (!editForm.name.trim()) {
+      wx.showToast({
+        title: '请输入用户名',
+        icon: 'none'
+      });
+      return;
+    }
+
+    // 更新用户信息
+    const app = getApp();
+    app.globalData.userInfo.name = editForm.name;
+    app.globalData.userInfo.babyAge = editForm.babyAge;
+    
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      showEditModal: false
+    });
+    
+    // 保存到本地存储
+    wx.setStorageSync('userInfo', app.globalData.userInfo);
+    
+    wx.showToast({
+      title: '保存成功',
+      icon: 'success'
+    });
+  },
+
+  onCancelEdit() {
+    this.setData({
+      showEditModal: false
     });
   },
 
@@ -35,10 +114,8 @@ Page({
   },
 
   onViewFavorites() {
-    wx.showModal({
-      title: '我的收藏',
-      content: `共收藏了 ${this.data.userInfo.favorites.length} 个食谱`,
-      showCancel: false
+    wx.navigateTo({
+      url: '/pages/favorites/favorites'
     });
   },
 
@@ -54,5 +131,15 @@ Page({
         icon: 'success'
       });
     }, 1500);
+  },
+
+  // 新增：点击收藏的食谱进入详情页
+  onFavoriteTap(e) {
+    const recipe = e.currentTarget.dataset.recipe;
+    if (recipe && recipe.id) {
+      wx.navigateTo({
+        url: `/pages/detail/detail?id=${recipe.id}`
+      });
+    }
   }
 }); 

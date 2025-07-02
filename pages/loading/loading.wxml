@@ -1,0 +1,27 @@
+<view class="loading-container">
+  <!-- 背景图片 -->
+  <image class="loading-bg" src="/images/loading.png" mode="aspectFill"></image>
+  
+  <!-- 倒计时显示 -->
+  <view class="countdown">
+    <text class="countdown-text">{{countdown}}s</text>
+  </view>
+  
+  <!-- 加载提示文字 -->
+  <view class="loading-text">
+    <text>{{loadingText}}</text>
+  </view>
+  
+  <!-- 跳过按钮 -->
+  <view class="skip-btn" bindtap="onSkip">
+    <text>跳过</text>
+  </view>
+  
+  <!-- 装饰元素 -->
+  <view class="decoration">
+    <view class="decoration-item">🥣</view>
+    <view class="decoration-item">🥕</view>
+    <view class="decoration-item">🥚</view>
+    <view class="decoration-item">🍎</view>
+  </view>
+</view> 

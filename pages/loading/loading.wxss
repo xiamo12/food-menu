@@ -1,0 +1,129 @@
+.loading-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%);
+}
+
+.loading-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.countdown {
+  position: absolute;
+  top: 60rpx;
+  right: 60rpx;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50rpx;
+  padding: 15rpx 25rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.countdown-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #FFB6C1;
+}
+
+.loading-text {
+  position: relative;
+  z-index: 10;
+  margin-top: 60rpx;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20rpx;
+  padding: 30rpx 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.loading-text text {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.skip-btn {
+  position: absolute;
+  bottom: 100rpx;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skip-btn:active {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 1);
+}
+
+.skip-btn text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  gap: 40rpx;
+  opacity: 0.3;
+}
+
+.decoration-item {
+  font-size: 60rpx;
+  animation: float 2s ease-in-out infinite;
+}
+
+.decoration-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.decoration-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.decoration-item:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.decoration-item:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20rpx);
+  }
+}
+
+/* 加载动画 */
+.loading-text {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+} 
