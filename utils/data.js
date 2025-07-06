@@ -23,7 +23,7 @@ const recipes = [
       "可根据宝宝喜好调整稠度",
       "首次食用建议少量尝试",
     ],
-    image: "/images/pumpkin-porridge.png",
+    image: "/images/food.png",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const recipes = [
     ingredients: ["苹果 1个（约150g）"],
     steps: ["苹果去皮去核", "擦成泥或用搅拌机打泥", "可用温水调节浓度"],
     notes: ["选用红富士等甜苹果", "避免使用酸涩口味", "适合6个月以上宝宝"],
-    image: "/images/apple-puree.png",
+    image: "/images/food.png",
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const recipes = [
       "可搭配配方奶增加口感（⚠️易过敏）",
       "适合7个月以上宝宝",
     ],
-    image: "/images/carrot-cereal.png",
+    image: "/images/food.png",
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const recipes = [
     ingredients: ["香蕉 1根（约80g）"],
     steps: ["香蕉去皮", "用勺子压成泥状", "直接喂食或加少许温水"],
     notes: ["香蕉应熟透且无黑斑", "避免冷藏直接食用", "适合6个月以上宝宝"],
-    image: "/images/banana-mash.png",
+    image: "/images/food.png",
   },
   {
     id: 5,
@@ -75,7 +75,7 @@ const recipes = [
       "去皮时建议戴手套",
       "适合7个月以上宝宝",
     ],
-    image: "/images/yam-cereal.png",
+    image: "/images/food.png",
   },
   {
     id: 6,
@@ -90,7 +90,7 @@ const recipes = [
       "表面光滑即可食用",
     ],
     notes: ["首次尝试建议只用蛋黄", "避免蒸过熟口感老硬", "适合8个月以上宝宝"],
-    image: "/images/egg-custard.png",
+    image: "/images/food.png",
   },
   {
     id: 7,
@@ -105,7 +105,7 @@ const recipes = [
       "如有便秘可增加喂食次数",
       "适合6个月以上宝宝",
     ],
-    image: "/images/sweetpotato-puree.png",
+    image: "/images/food.png",
   },
   {
     id: 8,
@@ -116,7 +116,7 @@ const recipes = [
     ingredients: ["豌豆仁 30g", "胡萝卜 30g"],
     steps: ["豌豆煮熟去皮打泥", "胡萝卜蒸熟压泥", "混合搅匀"],
     notes: ["豌豆需去皮防止胀气", "颜色鲜艳宝宝更爱吃", "适合8个月以上宝宝"],
-    image: "/images/pea-carrot.png",
+    image: "/images/food.png",
   },
   {
     id: 9,
@@ -131,7 +131,7 @@ const recipes = [
       "建议立即食用避免氧化",
       "适合9个月以上宝宝",
     ],
-    image: "/images/avocado-banana.png",
+    image: "/images/food.png",
   },
   {
     id: 10,
@@ -146,7 +146,7 @@ const recipes = [
       "粥煮至软糯无颗粒为宜",
       "适合9个月以上宝宝",
     ],
-    image: "/images/quinoa-pumpkin.png",
+    image: "/images/food.png",
   },
   {
     id: 11,
@@ -157,7 +157,7 @@ const recipes = [
     ingredients: ["红薯 60g"],
     steps: ["红薯去皮切片蒸熟", "压成泥或打成糊", "根据稠度加水调节"],
     notes: ["红薯甜度高，控制摄入量", "适合便秘宝宝", "冷却后更绵软"],
-    image: "/images/sweetpotato-puree.png",
+    image: "/images/food.png",
   },
   {
     id: 12,
@@ -176,7 +176,7 @@ const recipes = [
       "初次尝试绿色蔬菜建议搭配口味温和食材",
       "适合10个月以上宝宝",
     ],
-    image: "/images/broccoli-potato.png",
+    image: "/images/food.png",
   },
   {
     id: 13,
@@ -187,7 +187,7 @@ const recipes = [
     ingredients: ["牛肉末 30g", "番茄 30g", "大米 30g"],
     steps: ["番茄去皮切碎，牛肉焯水去腥", "与大米一同熬粥", "煮至米烂成粥状"],
     notes: ["牛肉可选低脂瘦肉", "番茄去籽防止刺激", "适合9个月以上宝宝"],
-    image: "/images/beef-tomato.png",
+    image: "/images/food.png",
   },
   {
     id: 14,
@@ -198,7 +198,7 @@ const recipes = [
     ingredients: ["玉米粒 20g", "胡萝卜 30g", "大米 30g"],
     steps: ["胡萝卜切丁、玉米煮熟打泥", "与大米一起煮成粥", "搅拌均匀即可"],
     notes: ["玉米须细打泥避免颗粒", "颜色鲜艳引发食欲", "适合8个月以上宝宝"],
-    image: "/images/corn-carrot.png",
+    image: "/images/food.png",
   },
   {
     id: 15,
@@ -213,7 +213,7 @@ const recipes = [
       "可添加南瓜泥调整口感",
       "适合10个月以上宝宝",
     ],
-    image: "/images/quinoa-chicken.png",
+    image: "/images/food.png",
   },
   {
     id: 16,
@@ -228,7 +228,7 @@ const recipes = [
       "控制摄入频率（1周1-2次）",
       "适合11个月以上宝宝",
     ],
-    image: "/images/liver-rice.png",
+    image: "/images/food.png",
   },
   {
     id: 17,
@@ -239,7 +239,7 @@ const recipes = [
     ingredients: ["冬瓜 40g", "虾仁 20g（⚠️易过敏）", "小米 30g"],
     steps: ["冬瓜切丁、虾仁去壳去肠线剁碎", "与小米一起熬粥", "熟后搅拌均匀"],
     notes: ["虾仁首次添加注意过敏反应", "冬瓜不宜生食", "适合10个月以上宝宝"],
-    image: "/images/wintermelon-shrimp.png",
+    image: "/images/food.png",
   },
   {
     id: 18,
@@ -254,7 +254,7 @@ const recipes = [
       "奶制品需观察过敏反应",
       "适合10个月以上宝宝",
     ],
-    image: "/images/cheese-yam.png",
+    image: "/images/food.png",
   },
   {
     id: 19,
@@ -269,7 +269,7 @@ const recipes = [
       "调稀一点更易吞咽",
       "适合6个月以上宝宝",
     ],
-    image: "/images/lotus-powder.png",
+    image: "/images/food.png",
   },
   {
     id: 20,
@@ -280,7 +280,7 @@ const recipes = [
     ingredients: ["熟牛油果 30g", "熟香蕉 30g"],
     steps: ["两者压泥或搅拌打糊", "无需加热直接喂食"],
     notes: ["香蕉和牛油果均应熟透", "避免吃太凉", "适合7个月以上宝宝"],
-    image: "/images/avocado-banana.png",
+    image: "/images/food.png",
   },
   {
     id: 21,
@@ -295,7 +295,7 @@ const recipes = [
       "南瓜选择板栗南瓜更香甜",
       "适合8个月以上宝宝",
     ],
-    image: "/images/pumpkin-corn.png",
+    image: "/images/food.png",
   },
   {
     id: 22,
@@ -306,7 +306,7 @@ const recipes = [
     ingredients: ["苹果 50g", "胡萝卜 30g"],
     steps: ["胡萝卜蒸熟压泥", "苹果去皮生磨成泥", "混合后搅匀即可"],
     notes: ["苹果不需加热", "胡萝卜需熟透口感更佳", "适合6个月以上宝宝"],
-    image: "/images/apple-carrot.png",
+    image: "/images/food.png",
   },
   {
     id: 23,
@@ -317,7 +317,7 @@ const recipes = [
     ingredients: ["山药 30g", "青菜叶 20g", "大米 30g"],
     steps: ["山药蒸熟压泥", "青菜焯水切细末", "与大米一起熬粥"],
     notes: ["注意去皮防过敏", "菜叶切碎避免噎食", "适合9个月以上宝宝"],
-    image: "/images/yam-greenrice.png",
+    image: "/images/food.png",
   },
   {
     id: 24,
@@ -332,7 +332,7 @@ const recipes = [
       "确保熟透避免生蛋风险",
       "适合10个月以上宝宝",
     ],
-    image: "/images/pumpkin-egg.png",
+    image: "/images/food.png",
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ const recipes = [
       "胡萝卜蒸熟口感更佳",
       "适合7个月以上宝宝",
     ],
-    image: "/images/tofu-carrot.png",
+    image: "/images/food.png",
   },
   {
     id: 26,
@@ -362,7 +362,7 @@ const recipes = [
       "绿色蔬菜适量添加即可",
       "适合8个月以上宝宝",
     ],
-    image: "/images/pea-cereal.png",
+    image: "/images/food.png",
   },
   {
     id: 27,
@@ -373,7 +373,7 @@ const recipes = [
     ingredients: ["香蕉 40g", "藜麦熟糊 30g"],
     steps: ["藜麦煮熟打成泥糊状", "香蕉压泥混合其中", "拌匀即可食用"],
     notes: ["藜麦预先浸泡后更好煮", "香蕉务必熟透无涩味", "适合10个月以上宝宝"],
-    image: "/images/banana-quinoa.png",
+    image: "/images/food.png",
   },
   {
     id: 28,
@@ -388,7 +388,7 @@ const recipes = [
       "苹果不建议加热保持营养",
       "适合7个月以上宝宝",
     ],
-    image: "/images/apple-yam.png",
+    image: "/images/food.png",
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ const recipes = [
       "鸡肉打碎避免咀嚼困难",
       "适合9个月以上宝宝",
     ],
-    image: "/images/zucchini-chicken.png",
+    image: "/images/food.png",
   },
   {
     id: 30,
@@ -414,7 +414,7 @@ const recipes = [
     ingredients: ["紫甘蓝叶 20g", "土豆 50g"],
     steps: ["紫甘蓝焯水切碎", "土豆蒸熟压泥", "两者混合搅拌均匀"],
     notes: ["颜色艳丽可激发食欲", "紫甘蓝初加建议少量", "适合10个月以上宝宝"],
-    image: "/images/cabbage-potato.png",
+    image: "/images/food.png",
   },
   {
     id: 31,
@@ -429,7 +429,7 @@ const recipes = [
       "冲调温度约40~50℃为宜",
       "适合10个月以上宝宝",
     ],
-    image: "/images/black-sesame.png",
+    image: "/images/food.png",
   },
   {
     id: 32,
@@ -448,7 +448,7 @@ const recipes = [
       "山药可提前用醋水泡防氧化",
       "适合10个月以上宝宝",
     ],
-    image: "/images/date-yam.png",
+    image: "/images/food.png",
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ const recipes = [
     ingredients: ["青豆仁 30g", "大米 30g"],
     steps: ["青豆煮熟打泥或过筛", "与大米一起煮粥", "粥熟后搅匀"],
     notes: ["注意去豆皮防胀气", "米粥可先用电饭煲预约", "适合9个月以上宝宝"],
-    image: "/images/pea-rice.png",
+    image: "/images/food.png",
   },
   {
     id: 34,
@@ -470,7 +470,7 @@ const recipes = [
     ingredients: ["茄子 40g", "牛肉末 30g"],
     steps: ["茄子去皮蒸软，牛肉煮熟剁碎", "两者混合压泥搅拌", "适量加水调稠度"],
     notes: ["茄子初次添加观察反应", "牛肉选瘦无筋部分", "适合11个月以上宝宝"],
-    image: "/images/eggplant-beef.png",
+    image: "/images/food.png",
   },
   {
     id: 35,
@@ -485,7 +485,7 @@ const recipes = [
       "搅拌至均匀即可",
     ],
     notes: ["注意西米煮透防止噎食", "不建议加入糖类", "适合11个月以上宝宝"],
-    image: "/images/milk-sago.png",
+    image: "/images/food.png",
   },
   {
     id: 36,
@@ -496,7 +496,7 @@ const recipes = [
     ingredients: ["紫薯 40g", "鸡蛋 1个（⚠️易过敏）"],
     steps: ["紫薯蒸熟压泥", "鸡蛋打匀，与紫薯混合", "蒸熟至凝固即可"],
     notes: ["蛋液打匀更嫩滑", "紫薯增加甜味和色彩", "适合10个月以上宝宝"],
-    image: "/images/yam-egg.png",
+    image: "/images/food.png",
   },
   {
     id: 37,
@@ -507,7 +507,7 @@ const recipes = [
     ingredients: ["南瓜 40g", "藜麦 30g"],
     steps: ["南瓜蒸熟压泥，藜麦煮熟", "混合煮粥搅拌均匀", "搅拌至适口即可"],
     notes: ["藜麦需提前浸泡1小时", "适合调理肠胃", "适合10个月以上宝宝"],
-    image: "/images/pumpkin-quinoa.png",
+    image: "/images/food.png",
   },
   {
     id: 38,
@@ -518,7 +518,7 @@ const recipes = [
     ingredients: ["西葫芦 40g", "配方奶 50ml（⚠️易过敏）"],
     steps: ["西葫芦去皮蒸熟压泥", "配方奶加热至40℃左右", "搅匀后喂食"],
     notes: ["避免奶太烫", "西葫芦水分足不需额外加水", "适合9个月以上宝宝"],
-    image: "/images/zucchini-milk.png",
+    image: "/images/food.png",
   },
   {
     id: 39,
@@ -533,7 +533,7 @@ const recipes = [
       "苹果建议选红富士甜口品种",
       "适合9个月以上宝宝",
     ],
-    image: "/images/apple-brownrice.png",
+    image: "/images/food.png",
   },
   {
     id: 40,
@@ -548,7 +548,7 @@ const recipes = [
       "初次尝试注意观察大便情况",
       "适合10个月以上宝宝",
     ],
-    image: "/images/pumpkin-date.png",
+    image: "/images/food.png",
   },
   {
     id: 41,
@@ -559,7 +559,7 @@ const recipes = [
     ingredients: ["银耳 5g", "雪梨 50g"],
     steps: ["银耳泡发后剪碎炖软", "雪梨切丁蒸熟打糊", "两者混合搅拌加热"],
     notes: ["银耳需充分炖软防止噎食", "建议秋冬季节食用", "适合11个月以上宝宝"],
-    image: "/images/pear-soup.png",
+    image: "/images/food.png",
   },
   {
     id: 42,
@@ -570,7 +570,7 @@ const recipes = [
     ingredients: ["绿豆 20g", "莲子 10g", "大米 30g"],
     steps: ["绿豆和莲子提前浸泡", "与大米一起熬粥煮软", "必要时压碎成泥"],
     notes: ["莲子去芯防苦", "适合夏季清淡饮食", "适合10个月以上宝宝"],
-    image: "/images/munglotus-rice.png",
+    image: "/images/food.png",
   },
   {
     id: 43,
@@ -581,7 +581,7 @@ const recipes = [
     ingredients: ["猪瘦肉末 30g", "胡萝卜 40g"],
     steps: ["猪肉煮熟剁碎", "胡萝卜蒸熟打泥", "混合加热搅拌均匀"],
     notes: ["胡萝卜甜味能遮盖肉腥味", "肉末打碎易吞咽", "适合9个月以上宝宝"],
-    image: "/images/pork-carrot.png",
+    image: "/images/food.png",
   },
   {
     id: 44,
@@ -596,7 +596,7 @@ const recipes = [
       "注意观察豆制品过敏反应",
       "适合9个月以上宝宝",
     ],
-    image: "/images/spinach-tofu.png",
+    image: "/images/food.png",
   },
   {
     id: 45,
@@ -607,7 +607,7 @@ const recipes = [
     ingredients: ["山药泥 40g", "鸡蛋 1个（⚠️易过敏）", "低筋面粉 20g"],
     steps: ["材料搅匀成糊状", "平底锅煎熟成小饼", "晾凉后手拿食用"],
     notes: ["适合练习自主进食", "初次加蛋建议只用蛋黄", "适合10个月以上宝宝"],
-    image: "/images/yam-eggcake.png",
+    image: "/images/food.png",
   },
   {
     id: 46,
@@ -622,7 +622,7 @@ const recipes = [
       "苹果不加热保留维C",
       "适合8个月以上宝宝",
     ],
-    image: "/images/redcabbage-apple.png",
+    image: "/images/food.png",
   },
   {
     id: 47,
@@ -633,7 +633,7 @@ const recipes = [
     ingredients: ["香蕉 30g", "南瓜 30g", "小米 30g"],
     steps: ["南瓜蒸熟压泥，小米煮粥", "粥好后加入香蕉压泥搅匀", "可打糊喂食"],
     notes: ["香蕉要熟透", "避免糖分过高，适量即可", "适合8个月以上宝宝"],
-    image: "/images/banana-pumpkin-millet.png",
+    image: "/images/food.png",
   },
   {
     id: 48,
@@ -644,7 +644,7 @@ const recipes = [
     ingredients: ["青菜叶 20g", "鸡蛋黄 1个（⚠️易过敏）", "米粉 20g"],
     steps: ["青菜焯水切碎", "鸡蛋煮熟取蛋黄压碎", "与米粉混合搅匀冲调"],
     notes: ["适合初期尝试蛋类宝宝", "青菜细碎可防止噎食", "适合7个月以上宝宝"],
-    image: "/images/egg-greenrice.png",
+    image: "/images/food.png",
   },
   {
     id: 49,
@@ -655,7 +655,7 @@ const recipes = [
     ingredients: ["龙利鱼肉 30g（⚠️易过敏）", "番茄 30g", "大米 30g"],
     steps: ["番茄去皮切碎，鱼肉蒸熟剁碎", "与米一起煮成粥", "搅拌均匀喂食"],
     notes: ["鱼类初尝应少量添加", "番茄建议去籽", "适合10个月以上宝宝"],
-    image: "/images/fish-tomato.png",
+    image: "/images/food.png",
   },
   {
     id: 50,
@@ -666,7 +666,7 @@ const recipes = [
     ingredients: ["黑豆 20g", "红枣 2颗", "大米 30g"],
     steps: ["黑豆和红枣提前泡软", "去枣核，与大米煮粥", "熟后打泥或搅拌均匀"],
     notes: ["黑豆初尝建议打碎后食用", "红枣需去核防噎", "适合10个月以上宝宝"],
-    image: "/images/blackbean-date.png",
+    image: "/images/food.png",
   },
 ];
 
