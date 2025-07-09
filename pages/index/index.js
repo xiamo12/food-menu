@@ -7,7 +7,10 @@ Page({
       lunch: null,
       dinner: null
     },
-    currentDate: ''
+    currentDate: '',
+    searchQuery: '',
+    searchResults: [],
+    showSearchResults: false
   },
 
   onLoad() {
@@ -18,6 +21,12 @@ Page({
   onShow() {
     // 只在显示页面时检查日期，不重新生成菜单
     this.checkAndUpdateMenu();
+    // 重置搜索功能
+    this.setData({
+      searchQuery: '',
+      searchResults: [],
+      showSearchResults: false
+    });
   },
 
   setCurrentDate() {
@@ -120,5 +129,37 @@ Page({
         icon: 'success'
       });
     }, 1000);
+  },
+
+  onSearchInput(e) {
+    const query = e.detail.value.trim();
+    this.setData({ searchQuery: query });
+    if (!query) {
+      this.setData({ searchResults: [], showSearchResults: false });
+      return;
+    }
+    // 搜索包含该食材的菜谱
+    const results = recipes.filter(recipe =>
+      recipe.ingredients.some(ingredient => ingredient.includes(query))
+    );
+    this.setData({
+      searchResults: results,
+      showSearchResults: true
+    });
+  },
+
+  onSearchResultTap(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${id}`
+    });
+  },
+
+  onClearSearch() {
+    this.setData({
+      searchQuery: '',
+      searchResults: [],
+      showSearchResults: false
+    });
   }
 }); 

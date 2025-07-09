@@ -1,10 +1,32 @@
 <view class="container">
+
+  <block wx:if="{{showSearchResults}}">
+    <view class="search-results">
+      <block wx:for="{{searchResults}}" wx:key="id">
+        <view class="search-result-item" bindtap="onSearchResultTap" data-id="{{item.id}}">
+          <view class="result-name">{{item.name}}</view>
+          <view class="result-desc">{{item.description}}</view>
+        </view>
+      </block>
+      <block wx:if="{{searchResults.length === 0}}">
+        <view class="no-result">未找到相关菜谱</view>
+      </block>
+    </view>
+  </block>
   <!-- 顶部标题 -->
   <view class="header">
     <view class="title">宝宝辅食菜单助手</view>
     <view class="date">今日菜单 ({{currentDate}})</view>
   </view>
-
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <view class="search-input-wrapper">
+      <input class="search-input" placeholder="搜索菜谱" bindinput="onSearchInput" value="{{searchQuery}}" />
+      <block wx:if="{{searchQuery}}">
+        <view class="clear-btn" bindtap="onClearSearch">✕</view>
+      </block>
+    </view>
+  </view>
   <!-- 早餐 -->
   <view class="meal-section">
     <view class="meal-title">
@@ -57,4 +79,4 @@
   <view class="regenerate-btn" bindtap="onRegenerateMenu">
     🔄 重新生成菜单
   </view>
-</view> 
+</view>
