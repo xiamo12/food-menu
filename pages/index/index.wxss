@@ -93,6 +93,7 @@
 }
 
 .search-bar {
+  position: relative;
   margin-bottom: 30rpx;
   padding: 0 10rpx;
 }
@@ -138,11 +139,17 @@
 }
 
 .search-results {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 44px;
   background: #fff;
   border-radius: 16rpx;
   box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
   margin-bottom: 30rpx;
   padding: 10rpx 0;
+  max-height: 470px;
+  overflow-y: auto;
 }
 
 .search-result-item {

@@ -8,9 +8,9 @@
   </view>
   
   <!-- 加载提示文字 -->
-  <view class="loading-text">
+  <!-- <view class="loading-text">
     <text>{{loadingText}}</text>
-  </view>
+  </view> -->
   
   <!-- 跳过按钮 -->
   <view class="skip-btn" bindtap="onSkip">
