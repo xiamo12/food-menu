@@ -1,17 +1,11 @@
 // 食谱数据
-const recipes = [
-  {
+const recipes = [{
     id: 1,
     name: "南瓜小米粥",
     type: "breakfast",
     icon: "🎃",
     description: "适合1岁宝宝，营养丰富",
-    ingredients: [
-      "南瓜 50g",
-      "小米 30g",
-      "清水 200ml",
-      "配方奶 50ml（可选⚠️易过敏）",
-    ],
+    ingredients: ["南瓜 50g", "小米 30g", "清水 200ml", "配方奶 50ml"],
     steps: [
       "南瓜去皮切小块",
       "小米淘洗干净",
@@ -33,7 +27,7 @@ const recipes = [
     description: "口感细腻，富含维生素C",
     ingredients: ["苹果 1个（约150g）"],
     steps: ["苹果去皮去核", "擦成泥或用搅拌机打泥", "可用温水调节浓度"],
-    notes: ["选用红富士等甜苹果", "避免使用酸涩口味", "适合6个月以上宝宝"],
+    notes: ["选用红富士等甜苹果"],
     image: "/images/food.png",
   },
   {
@@ -44,11 +38,7 @@ const recipes = [
     description: "富含维A，有助宝宝视觉发育",
     ingredients: ["胡萝卜 40g", "婴儿米粉 20g", "温水 150ml"],
     steps: ["胡萝卜蒸熟后打成泥", "用温水调米粉", "混合胡萝卜泥搅拌均匀"],
-    notes: [
-      "胡萝卜需彻底蒸软",
-      "可搭配配方奶增加口感（⚠️易过敏）",
-      "适合7个月以上宝宝",
-    ],
+    notes: ["胡萝卜彻底蒸软", "可搭配配方奶增加口感"],
     image: "/images/food.png",
   },
   {
@@ -59,7 +49,7 @@ const recipes = [
     description: "软糯香甜，缓解便秘",
     ingredients: ["香蕉 1根（约80g）"],
     steps: ["香蕉去皮", "用勺子压成泥状", "直接喂食或加少许温水"],
-    notes: ["香蕉应熟透且无黑斑", "避免冷藏直接食用", "适合6个月以上宝宝"],
+    notes: ["香蕉应熟透且无黑斑", "吃不完可以密封冷冻保存，下次复烤加热即可"],
     image: "/images/food.png",
   },
   {
@@ -70,11 +60,7 @@ const recipes = [
     description: "助消化，增强抵抗力",
     ingredients: ["山药 30g", "米粉 20g"],
     steps: ["山药去皮切片蒸熟", "压成泥后混入米粉", "加入适量温水搅匀"],
-    notes: [
-      "山药易过敏，初次喂食请观察",
-      "去皮时建议戴手套",
-      "适合7个月以上宝宝",
-    ],
+    notes: ["去皮时建议戴手套", "根据宝宝情况调整"],
     image: "/images/food.png",
   },
   {
@@ -83,13 +69,13 @@ const recipes = [
     type: "dinner",
     icon: "🥚",
     description: "高蛋白易消化，适合晚餐",
-    ingredients: ["鸡蛋 1个（⚠️易过敏）", "温水 100ml"],
+    ingredients: ["鸡蛋 1个", "温水 100ml"],
     steps: [
       "打散鸡蛋与温水按1:2比例搅匀",
       "过滤泡沫，入碗蒸10分钟",
       "表面光滑即可食用",
     ],
-    notes: ["首次尝试建议只用蛋黄", "避免蒸过熟口感老硬", "适合8个月以上宝宝"],
+    notes: ["首次尝试建议只用蛋黄", "根据宝宝情况调整"],
     image: "/images/food.png",
   },
   {
@@ -100,11 +86,7 @@ const recipes = [
     description: "富含膳食纤维，口感甜糯",
     ingredients: ["红薯 50g"],
     steps: ["红薯蒸熟或烤熟", "去皮后压成泥", "可加少许温水调稀"],
-    notes: [
-      "不建议空腹食用红薯",
-      "如有便秘可增加喂食次数",
-      "适合6个月以上宝宝",
-    ],
+    notes: ["不建议空腹食用红薯", "如有便秘可增加喂食次数"],
     image: "/images/food.png",
   },
   {
@@ -115,7 +97,7 @@ const recipes = [
     description: "多种蔬菜组合，丰富纤维",
     ingredients: ["豌豆仁 30g", "胡萝卜 30g"],
     steps: ["豌豆煮熟去皮打泥", "胡萝卜蒸熟压泥", "混合搅匀"],
-    notes: ["豌豆需去皮防止胀气", "颜色鲜艳宝宝更爱吃", "适合8个月以上宝宝"],
+    notes: ["豌豆需去皮防止胀气", "颜色鲜艳宝宝更爱吃"],
     image: "/images/food.png",
   },
   {
@@ -124,13 +106,9 @@ const recipes = [
     type: "snack",
     icon: "🥑",
     description: "高脂肪、高能量，促进脑发育",
-    ingredients: ["牛油果 30g（⚠️易过敏）", "香蕉 30g"],
+    ingredients: ["牛油果 30g", "香蕉 30g"],
     steps: ["牛油果去皮去核取果肉", "香蕉去皮压泥", "混合搅拌均匀即可"],
-    notes: [
-      "牛油果熟透后才易消化",
-      "建议立即食用避免氧化",
-      "适合9个月以上宝宝",
-    ],
+    notes: ["牛油果选熟透的", "建议立即食用，口感更好"],
     image: "/images/food.png",
   },
   {
@@ -142,9 +120,8 @@ const recipes = [
     ingredients: ["南瓜 40g", "藜麦 20g", "清水 200ml"],
     steps: ["藜麦提前浸泡1小时", "南瓜蒸熟压泥", "两者一起熬煮成粥"],
     notes: [
-      "藜麦含植物蛋白，营养全面",
-      "粥煮至软糯无颗粒为宜",
-      "适合9个月以上宝宝",
+      "藜麦含植物蛋白",
+      "粥煮至软糯无颗粒为宜"
     ],
     image: "/images/food.png",
   },
@@ -156,7 +133,7 @@ const recipes = [
     description: "口感软糯，易于吞咽",
     ingredients: ["红薯 60g"],
     steps: ["红薯去皮切片蒸熟", "压成泥或打成糊", "根据稠度加水调节"],
-    notes: ["红薯甜度高，控制摄入量", "适合便秘宝宝", "冷却后更绵软"],
+    notes: ["红薯甜度高，适量摄入", "适合便秘宝宝", "冷却后更绵软"],
     image: "/images/food.png",
   },
   {
@@ -173,8 +150,7 @@ const recipes = [
     ],
     notes: [
       "西兰花不要久煮",
-      "初次尝试绿色蔬菜建议搭配口味温和食材",
-      "适合10个月以上宝宝",
+      "绿色蔬菜搭配其他温和食材，口感更丰富",
     ],
     image: "/images/food.png",
   },
@@ -186,7 +162,7 @@ const recipes = [
     description: "补铁补锌，助力发育",
     ingredients: ["牛肉末 30g", "番茄 30g", "大米 30g"],
     steps: ["番茄去皮切碎，牛肉焯水去腥", "与大米一同熬粥", "煮至米烂成粥状"],
-    notes: ["牛肉可选低脂瘦肉", "番茄去籽防止刺激", "适合9个月以上宝宝"],
+    notes: ["牛肉可选低脂瘦肉", "番茄去籽防止刺激"],
     image: "/images/food.png",
   },
   {
@@ -197,7 +173,7 @@ const recipes = [
     description: "口感香甜，宝宝喜爱",
     ingredients: ["玉米粒 20g", "胡萝卜 30g", "大米 30g"],
     steps: ["胡萝卜切丁、玉米煮熟打泥", "与大米一起煮成粥", "搅拌均匀即可"],
-    notes: ["玉米须细打泥避免颗粒", "颜色鲜艳引发食欲", "适合8个月以上宝宝"],
+    notes: ["玉米打成泥，口感好", "颜色鲜艳引发食欲"],
     image: "/images/food.png",
   },
   {
@@ -211,7 +187,6 @@ const recipes = [
     notes: [
       "注意藜麦是否彻底煮熟",
       "可添加南瓜泥调整口感",
-      "适合10个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -221,12 +196,11 @@ const recipes = [
     type: "lunch",
     icon: "🧄",
     description: "高铁食谱，改善贫血",
-    ingredients: ["猪肝 20g（⚠️易过敏）", "山药 40g", "大米 30g"],
+    ingredients: ["猪肝 20g", "山药 40g", "大米 30g"],
     steps: ["猪肝焯水去腥，切细末", "山药去皮切块蒸熟", "所有材料煮粥搅匀"],
     notes: [
       "猪肝初次添加需谨慎",
       "控制摄入频率（1周1-2次）",
-      "适合11个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -236,9 +210,9 @@ const recipes = [
     type: "dinner",
     icon: "🦐",
     description: "低脂清淡，口感鲜美",
-    ingredients: ["冬瓜 40g", "虾仁 20g（⚠️易过敏）", "小米 30g"],
+    ingredients: ["冬瓜 40g", "虾仁 20g", "小米 30g"],
     steps: ["冬瓜切丁、虾仁去壳去肠线剁碎", "与小米一起熬粥", "熟后搅拌均匀"],
-    notes: ["虾仁首次添加注意过敏反应", "冬瓜不宜生食", "适合10个月以上宝宝"],
+    notes: ["虾仁首次添加注意过敏反应", "冬瓜不宜生食"],
     image: "/images/food.png",
   },
   {
@@ -247,12 +221,11 @@ const recipes = [
     type: "breakfast",
     icon: "🧀",
     description: "钙质丰富，增强骨骼",
-    ingredients: ["紫薯 40g", "宝宝奶酪 15g（⚠️易过敏）"],
+    ingredients: ["紫薯 40g", "宝宝奶酪 15g"],
     steps: ["紫薯蒸熟压泥", "混合奶酪搅匀加热", "搅拌至糊状即可"],
     notes: [
       "宝宝专用奶酪含盐量低",
       "奶制品需观察过敏反应",
-      "适合10个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -267,7 +240,6 @@ const recipes = [
     notes: [
       "注意藕粉冲调水温不可过热",
       "调稀一点更易吞咽",
-      "适合6个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -279,7 +251,7 @@ const recipes = [
     description: "好脂肪与碳水化合物结合",
     ingredients: ["熟牛油果 30g", "熟香蕉 30g"],
     steps: ["两者压泥或搅拌打糊", "无需加热直接喂食"],
-    notes: ["香蕉和牛油果均应熟透", "避免吃太凉", "适合7个月以上宝宝"],
+    notes: ["香蕉和牛油果均应熟透", "避免吃太凉"],
     image: "/images/food.png",
   },
   {
@@ -293,7 +265,6 @@ const recipes = [
     notes: [
       "玉米需充分打碎避免颗粒",
       "南瓜选择板栗南瓜更香甜",
-      "适合8个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -305,7 +276,7 @@ const recipes = [
     description: "维生素丰富，帮助视觉发育",
     ingredients: ["苹果 50g", "胡萝卜 30g"],
     steps: ["胡萝卜蒸熟压泥", "苹果去皮生磨成泥", "混合后搅匀即可"],
-    notes: ["苹果不需加热", "胡萝卜需熟透口感更佳", "适合6个月以上宝宝"],
+    notes: ["苹果不需加热", "胡萝卜需熟透口感更佳"],
     image: "/images/food.png",
   },
   {
@@ -316,7 +287,7 @@ const recipes = [
     description: "温和助消化，适合换季时节",
     ingredients: ["山药 30g", "青菜叶 20g", "大米 30g"],
     steps: ["山药蒸熟压泥", "青菜焯水切细末", "与大米一起熬粥"],
-    notes: ["注意去皮防过敏", "菜叶切碎避免噎食", "适合9个月以上宝宝"],
+    notes: ["注意去皮防过敏", "菜叶切碎避免噎食"],
     image: "/images/food.png",
   },
   {
@@ -325,12 +296,11 @@ const recipes = [
     type: "dinner",
     icon: "🍮",
     description: "丰富蛋白质与胡萝卜素",
-    ingredients: ["南瓜 40g", "鸡蛋 1个（⚠️易过敏）"],
+    ingredients: ["南瓜 40g", "鸡蛋 1个"],
     steps: ["南瓜蒸熟打泥", "鸡蛋打散混合南瓜泥", "蒸10分钟即可"],
     notes: [
       "初次喂蛋建议分次添加",
       "确保熟透避免生蛋风险",
-      "适合10个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -340,12 +310,11 @@ const recipes = [
     type: "lunch",
     icon: "🥣",
     description: "蛋白质丰富，口感细腻",
-    ingredients: ["嫩豆腐 50g（⚠️易过敏）", "胡萝卜 30g"],
+    ingredients: ["嫩豆腐 50g", "胡萝卜 30g"],
     steps: ["豆腐焯水后压碎", "胡萝卜蒸熟打泥", "混合搅匀加热即可"],
     notes: [
       "豆腐口感滑嫩，适合初期辅食",
       "胡萝卜蒸熟口感更佳",
-      "适合7个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -360,7 +329,6 @@ const recipes = [
     notes: [
       "豌豆务必去皮避免难消化",
       "绿色蔬菜适量添加即可",
-      "适合8个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -372,7 +340,7 @@ const recipes = [
     description: "增强饱腹感，能量满满",
     ingredients: ["香蕉 40g", "藜麦熟糊 30g"],
     steps: ["藜麦煮熟打成泥糊状", "香蕉压泥混合其中", "拌匀即可食用"],
-    notes: ["藜麦预先浸泡后更好煮", "香蕉务必熟透无涩味", "适合10个月以上宝宝"],
+    notes: ["藜麦预先浸泡后更好煮", "香蕉务必熟透无涩味"],
     image: "/images/food.png",
   },
   {
@@ -386,7 +354,6 @@ const recipes = [
     notes: [
       "山药需彻底熟透避免痒口",
       "苹果不建议加热保持营养",
-      "适合7个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -401,7 +368,6 @@ const recipes = [
     notes: [
       "西葫芦口感滑嫩，易消化",
       "鸡肉打碎避免咀嚼困难",
-      "适合9个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -413,7 +379,7 @@ const recipes = [
     description: "抗氧化强，色彩鲜艳",
     ingredients: ["紫甘蓝叶 20g", "土豆 50g"],
     steps: ["紫甘蓝焯水切碎", "土豆蒸熟压泥", "两者混合搅拌均匀"],
-    notes: ["颜色艳丽可激发食欲", "紫甘蓝初加建议少量", "适合10个月以上宝宝"],
+    notes: ["颜色艳丽可激发食欲", "紫甘蓝初加建议少量"],
     image: "/images/food.png",
   },
   {
@@ -422,12 +388,11 @@ const recipes = [
     type: "breakfast",
     icon: "🌰",
     description: "补钙护发，香浓细滑",
-    ingredients: ["熟黑芝麻粉 5g（⚠️易过敏）", "婴儿米粉 20g", "温水 150ml"],
+    ingredients: ["熟黑芝麻粉 5g", "婴儿米粉 20g", "温水 150ml"],
     steps: ["黑芝麻粉和米粉干混合", "缓缓加入温水搅匀", "冲至顺滑无颗粒"],
     notes: [
       "初次添加黑芝麻应少量尝试",
       "冲调温度约40~50℃为宜",
-      "适合10个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -444,9 +409,8 @@ const recipes = [
       "根据稠度适量加温水",
     ],
     notes: [
-      "避免红枣皮造成噎食",
+      "红枣去皮去核",
       "山药可提前用醋水泡防氧化",
-      "适合10个月以上宝宝",
     ],
     image: "/images/food.png",
   },
@@ -458,7 +422,7 @@ const recipes = [
     description: "绿色营养，利于消化",
     ingredients: ["青豆仁 30g", "大米 30g"],
     steps: ["青豆煮熟打泥或过筛", "与大米一起煮粥", "粥熟后搅匀"],
-    notes: ["注意去豆皮防胀气", "米粥可先用电饭煲预约", "适合9个月以上宝宝"],
+    notes: ["青豆去皮，防胀气", "米粥可先用电饭煲预约"],
     image: "/images/food.png",
   },
   {
@@ -469,7 +433,7 @@ const recipes = [
     description: "增强免疫力，口味独特",
     ingredients: ["茄子 40g", "牛肉末 30g"],
     steps: ["茄子去皮蒸软，牛肉煮熟剁碎", "两者混合压泥搅拌", "适量加水调稠度"],
-    notes: ["茄子初次添加观察反应", "牛肉选瘦无筋部分", "适合11个月以上宝宝"],
+    notes: ["茄子初次添加观察反应", "牛肉选瘦肉、无筋部分"],
     image: "/images/food.png",
   },
   {
@@ -478,13 +442,13 @@ const recipes = [
     type: "snack",
     icon: "🥛",
     description: "香甜软糯，满足口感需求",
-    ingredients: ["宝宝配方奶 80ml（⚠️易过敏）", "西米 15g"],
+    ingredients: ["宝宝配方奶 80ml", "西米 15g"],
     steps: [
       "西米煮透后泡凉水去粘性",
       "重新加热后加入配方奶搅匀",
       "搅拌至均匀即可",
     ],
-    notes: ["注意西米煮透防止噎食", "不建议加入糖类", "适合11个月以上宝宝"],
+    notes: ["西米煮透之后再喂食", "不加糖"],
     image: "/images/food.png",
   },
   {
@@ -493,9 +457,9 @@ const recipes = [
     type: "dinner",
     icon: "🍠",
     description: "营养均衡，色泽诱人",
-    ingredients: ["紫薯 40g", "鸡蛋 1个（⚠️易过敏）"],
+    ingredients: ["紫薯 40g", "鸡蛋 1个"],
     steps: ["紫薯蒸熟压泥", "鸡蛋打匀，与紫薯混合", "蒸熟至凝固即可"],
-    notes: ["蛋液打匀更嫩滑", "紫薯增加甜味和色彩", "适合10个月以上宝宝"],
+    notes: ["蛋液打匀更嫩滑", "紫薯增加甜味和色彩"],
     image: "/images/food.png",
   },
   {
@@ -506,7 +470,7 @@ const recipes = [
     description: "膳食纤维丰富，适合清晨",
     ingredients: ["南瓜 40g", "藜麦 30g"],
     steps: ["南瓜蒸熟压泥，藜麦煮熟", "混合煮粥搅拌均匀", "搅拌至适口即可"],
-    notes: ["藜麦需提前浸泡1小时", "适合调理肠胃", "适合10个月以上宝宝"],
+    notes: ["藜麦提前浸泡1小时", "适合调理肠胃"],
     image: "/images/food.png",
   },
   {
@@ -515,9 +479,9 @@ const recipes = [
     type: "dinner",
     icon: "🥒",
     description: "清爽润滑，利尿助消化",
-    ingredients: ["西葫芦 40g", "配方奶 50ml（⚠️易过敏）"],
+    ingredients: ["西葫芦 40g", "配方奶 50ml"],
     steps: ["西葫芦去皮蒸熟压泥", "配方奶加热至40℃左右", "搅匀后喂食"],
-    notes: ["避免奶太烫", "西葫芦水分足不需额外加水", "适合9个月以上宝宝"],
+    notes: ["温度适宜后喂食", "西葫芦水分足，可以不额外加水"],
     image: "/images/food.png",
   },
   {
@@ -529,9 +493,8 @@ const recipes = [
     ingredients: ["苹果 50g", "糙米 30g"],
     steps: ["苹果切丁，糙米泡软", "一同煮至粥状搅匀", "必要时可打糊"],
     notes: [
-      "糙米口感粗糙需充分煮",
-      "苹果建议选红富士甜口品种",
-      "适合9个月以上宝宝",
+      "糙米口感粗糙，需充分煮",
+      "苹果选甜口品种",
     ],
     image: "/images/food.png",
   },
@@ -544,9 +507,8 @@ const recipes = [
     ingredients: ["南瓜 40g", "红枣 2颗", "小米 30g"],
     steps: ["红枣去核蒸熟切碎", "南瓜蒸熟压泥", "与小米煮粥搅匀即可"],
     notes: [
-      "红枣不要整颗喂食",
-      "初次尝试注意观察大便情况",
-      "适合10个月以上宝宝",
+      "红枣去核去皮",
+      "初次尝试的话，要观察一下大便情况",
     ],
     image: "/images/food.png",
   },
@@ -558,7 +520,7 @@ const recipes = [
     description: "润肺止咳，适合干燥季节",
     ingredients: ["银耳 5g", "雪梨 50g"],
     steps: ["银耳泡发后剪碎炖软", "雪梨切丁蒸熟打糊", "两者混合搅拌加热"],
-    notes: ["银耳需充分炖软防止噎食", "建议秋冬季节食用", "适合11个月以上宝宝"],
+    notes: ["银耳充分炖软", "秋冬季节食用"],
     image: "/images/food.png",
   },
   {
@@ -569,7 +531,7 @@ const recipes = [
     description: "清热去火，夏季推荐",
     ingredients: ["绿豆 20g", "莲子 10g", "大米 30g"],
     steps: ["绿豆和莲子提前浸泡", "与大米一起熬粥煮软", "必要时压碎成泥"],
-    notes: ["莲子去芯防苦", "适合夏季清淡饮食", "适合10个月以上宝宝"],
+    notes: ["莲子去芯", "适合夏季清淡饮食"],
     image: "/images/food.png",
   },
   {
@@ -580,7 +542,7 @@ const recipes = [
     description: "补铁健脾，口味香甜",
     ingredients: ["猪瘦肉末 30g", "胡萝卜 40g"],
     steps: ["猪肉煮熟剁碎", "胡萝卜蒸熟打泥", "混合加热搅拌均匀"],
-    notes: ["胡萝卜甜味能遮盖肉腥味", "肉末打碎易吞咽", "适合9个月以上宝宝"],
+    notes: ["胡萝卜甜味能遮盖肉腥味", "肉末打碎易吞咽"],
     image: "/images/food.png",
   },
   {
@@ -589,13 +551,9 @@ const recipes = [
     type: "lunch",
     icon: "🥬",
     description: "含铁补钙，绿色营养",
-    ingredients: ["菠菜叶 30g", "嫩豆腐 50g（⚠️易过敏）"],
+    ingredients: ["菠菜叶 30g", "嫩豆腐 50g"],
     steps: ["菠菜焯水去草酸后切碎", "豆腐焯水后压碎", "混合搅拌加热"],
-    notes: [
-      "菠菜用菜心嫩叶部分",
-      "注意观察豆制品过敏反应",
-      "适合9个月以上宝宝",
-    ],
+    notes: ["菠菜用菜心嫩叶部分", "根据情况调整食材"],
     image: "/images/food.png",
   },
   {
@@ -604,9 +562,9 @@ const recipes = [
     type: "snack",
     icon: "🥚",
     description: "锻炼抓握力，营养饱腹",
-    ingredients: ["山药泥 40g", "鸡蛋 1个（⚠️易过敏）", "低筋面粉 20g"],
+    ingredients: ["山药泥 40g", "鸡蛋 1个", "低筋面粉 20g"],
     steps: ["材料搅匀成糊状", "平底锅煎熟成小饼", "晾凉后手拿食用"],
-    notes: ["适合练习自主进食", "初次加蛋建议只用蛋黄", "适合10个月以上宝宝"],
+    notes: ["练习宝宝自主进食", "初次加蛋，只用蛋黄", ],
     image: "/images/food.png",
   },
   {
@@ -618,9 +576,8 @@ const recipes = [
     ingredients: ["紫甘蓝叶 20g", "苹果 40g"],
     steps: ["紫甘蓝焯水切碎打泥", "苹果擦泥混合其中", "拌匀即可"],
     notes: [
-      "紫甘蓝颜色易染色注意衣物",
-      "苹果不加热保留维C",
-      "适合8个月以上宝宝",
+      "紫甘蓝颜色易染色",
+      "苹果不加热，保留维C",
     ],
     image: "/images/food.png",
   },
@@ -632,7 +589,7 @@ const recipes = [
     description: "润肠通便，改善便秘",
     ingredients: ["香蕉 30g", "南瓜 30g", "小米 30g"],
     steps: ["南瓜蒸熟压泥，小米煮粥", "粥好后加入香蕉压泥搅匀", "可打糊喂食"],
-    notes: ["香蕉要熟透", "避免糖分过高，适量即可", "适合8个月以上宝宝"],
+    notes: ["香蕉要熟透", "少量摄入"],
     image: "/images/food.png",
   },
   {
@@ -641,9 +598,9 @@ const recipes = [
     type: "breakfast",
     icon: "🍳",
     description: "清新口感，增强免疫",
-    ingredients: ["青菜叶 20g", "鸡蛋黄 1个（⚠️易过敏）", "米粉 20g"],
+    ingredients: ["青菜叶 20g", "鸡蛋黄 1个", "米粉 20g"],
     steps: ["青菜焯水切碎", "鸡蛋煮熟取蛋黄压碎", "与米粉混合搅匀冲调"],
-    notes: ["适合初期尝试蛋类宝宝", "青菜细碎可防止噎食", "适合7个月以上宝宝"],
+    notes: ["如果是第一次吃蛋，只使用蛋黄", "青菜切碎，更易入口", "根据情况调整食材"],
     image: "/images/food.png",
   },
   {
@@ -652,9 +609,9 @@ const recipes = [
     type: "lunch",
     icon: "🐟",
     description: "富含DHA，促进大脑发育",
-    ingredients: ["龙利鱼肉 30g（⚠️易过敏）", "番茄 30g", "大米 30g"],
+    ingredients: ["龙利鱼肉 30g", "番茄 30g", "大米 30g"],
     steps: ["番茄去皮切碎，鱼肉蒸熟剁碎", "与米一起煮成粥", "搅拌均匀喂食"],
-    notes: ["鱼类初尝应少量添加", "番茄建议去籽", "适合10个月以上宝宝"],
+    notes: ["鱼类初尝，应该少量添加", "番茄去籽"],
     image: "/images/food.png",
   },
   {
@@ -665,25 +622,60 @@ const recipes = [
     description: "补血补铁，增强体质",
     ingredients: ["黑豆 20g", "红枣 2颗", "大米 30g"],
     steps: ["黑豆和红枣提前泡软", "去枣核，与大米煮粥", "熟后打泥或搅拌均匀"],
-    notes: ["黑豆初尝建议打碎后食用", "红枣需去核防噎", "适合10个月以上宝宝"],
+    notes: ["黑豆打碎后食用，更易入口", "红枣去核去皮"],
     image: "/images/food.png",
   },
 ];
 
 // 常见过敏食材
-const commonAllergies = [
-  { name: "花生", icon: "🥜" },
-  { name: "鸡蛋", icon: "🥚" },
-  { name: "牛奶", icon: "🥛" },
-  { name: "虾", icon: "🦐" },
-  { name: "蟹", icon: "🦀" },
-  { name: "坚果", icon: "🥜" },
-  { name: "小麦", icon: "🌾" },
-  { name: "大豆", icon: "🫘" },
-  { name: "鱼类", icon: "🐟" },
-  { name: "苹果", icon: "🍎" },
-  { name: "桃子", icon: "🍑" },
-  { name: "草莓", icon: "🍓" },
+const commonAllergies = [{
+    name: "花生",
+    icon: "🥜"
+  },
+  {
+    name: "鸡蛋",
+    icon: "🥚"
+  },
+  {
+    name: "牛奶",
+    icon: "🥛"
+  },
+  {
+    name: "虾",
+    icon: "🦐"
+  },
+  {
+    name: "蟹",
+    icon: "🦀"
+  },
+  {
+    name: "坚果",
+    icon: "🥜"
+  },
+  {
+    name: "小麦",
+    icon: "🌾"
+  },
+  {
+    name: "大豆",
+    icon: "🫘"
+  },
+  {
+    name: "鱼类",
+    icon: "🐟"
+  },
+  {
+    name: "苹果",
+    icon: "🍎"
+  },
+  {
+    name: "桃子",
+    icon: "🍑"
+  },
+  {
+    name: "草莓",
+    icon: "🍓"
+  },
 ];
 
 module.exports = {

@@ -4,7 +4,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 40rpx;
+  margin-bottom: 20rpx;
 }
 
 .title {
@@ -12,6 +12,16 @@
   font-weight: bold;
   color: #333;
   margin-bottom: 10rpx;
+}
+/* 弱化"注意事项"的视觉权重 */
+.footer-tips {
+  font-size: 10px;
+  color: rgba(134, 128, 128, 0.404);
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px dashed #eee;
 }
 
 .date {
@@ -88,13 +98,13 @@
   border-radius: 12rpx;
   font-size: 30rpx;
   font-weight: bold;
-  margin-top: 40rpx;
+  margin-top: 10rpx;
   box-shadow: 0 4rpx 12rpx rgba(255, 182, 193, 0.3);
 }
 
 .search-bar {
   position: relative;
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
   padding: 0 10rpx;
 }
 

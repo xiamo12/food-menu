@@ -74,9 +74,12 @@
       </view>
     </view>
   </view>
+  <view class="footer-tips">
+    *食谱仅供参考，具体食材选择请根据实际情况调整
+  </view>
 
   <!-- 重新生成按钮 -->
   <view class="regenerate-btn" bindtap="onRegenerateMenu">
-    🔄 重新生成菜单
+    🔄 换一换
   </view>
 </view>

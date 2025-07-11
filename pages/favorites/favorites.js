@@ -23,7 +23,7 @@ Page({
     if (recipe && recipe.id) {
       wx.navigateTo({
         url: `/pages/detail/detail?id=${recipe.id}`
-      });
+      })
     }
   },
 
